@@ -33,6 +33,8 @@ begin
     IF @count > 0 then
         SET RTN_CODE = 100; -- 이미 존재하는 사용자 있다.
     ELSE
+        set @name = name;
+        
         IF korean < 0 then
             set @korean = 0;
         ELSEIF korean > 100 then
